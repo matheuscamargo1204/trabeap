@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> o que é </title>
+    <link rel="stylesheet" type="text/css" href="home.css" media="screen" />
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+   </head>
+<body>
+  <nav id= "menu">
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxs-battery-charging icon'></i>
+      
+      <a href="home.html"rell= "prev">
+        <div class="logo_name">CLEAN ENERGY</div>    
+    </a>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li>
+      
+      <li>
+       <a href="user.html"rell= "next">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">User</span>
+       </a>
+       <span class="tooltip">User</span>
+     </li>
+     <li>
+       <a href="Messages.html">
+         <i class='bx bx-chat' ></i>
+         <span class="links_name">Messages</span>
+       </a>
+       <span class="tooltip">Messages</span>
+     </li>
+     <li>
+       <a href="oque.html">
+        <i class='bx bx-question-mark'></i>
+         <span class="links_name">o que é</span>
+       </a>
+       <span class="tooltip">o que é</span>
+     </li>
+     <li>
+       <a href="eolica.html">
+        <i class='bx bx-wind' ></i>
+         <span class="links_name">Energia Eolica</span>
+       </a>
+       <span class="tooltip">Eolica</span>
+     </li>
+     <li>
+       <a href="fotovoltaica.html">
+        <i class='bx bx-bolt-circle' ></i>
+         <span class="links_name">Fotovoltaica</span>
+       </a>
+       <span class="tooltip">Fotovoltaica</span>
+     </li>
+     <li>
+       <a href="maremotriz.html">
+        <i class='bx bx-water'></i>
+         <span class="links_name">Maremotriz</span>
+       </a>
+       <span class="tooltip">Maremotriz</span>
+     </li>
+     <li>
+       <a href="comprar.html">
+        <i class='bx bx-cart-alt' ></i>
+         <span class="links_name">Comprar</span>
+       </a>
+       <span class="tooltip">$$</span>
+     </li>
+     <li class="profile">
+         <div class="profile-details">
+           <img src="profile.jpg" alt="profileImg">
+           <div class="name_job">
+             <div class="name">bem vindo!!</div>
+             <div class="job">matheus</div>
+           </div>
+         </div>
+         <a href="tela-de-login.html">
+          <i class='bx bx-log-out' id="log_out" ></i>
+         </a>
+     </li>
+    </ul>
+  </div>
+  
+  </nav>
+  <div id= "interface">
+  <section class="home-section">
+      <div class="text"> o que é</div> 
+      
+      
+  </div>
+        
+  </section>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+  </script>
+</body>
+</html>
+
